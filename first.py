@@ -3,3 +3,10 @@
 print("hello world")
 
 
+x=42
+
+if (x==42):
+  print('Yes')
+  print('Yes')
+
+print('--')
