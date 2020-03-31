@@ -31,6 +31,7 @@ chmod a+x file1.py
 -> chmod steht für change mode
 
 === In vi oder nano
+
 wir benutzen als erstes den shebang (Shebang bezeichnet die Zeichenkombination #! am Anfang eines Skriptprogramms, ähnlich einer Dokumenttypdefinition. Bei unixoiden Betriebssystemen führt die Markierung mit Doppelkreuz und Ausrufezeichen dazu, dass das folgende Kommando mitsamt allen angegebenen Argumenten beim Aufruf des Programms ausgeführt wird. Der Dateiname wird dann als weiteres Argument übergeben.)<1>
 
 <1> https://de.wikipedia.org/wiki/Shebang 
@@ -40,8 +41,13 @@ wir benutzen als erstes den shebang (Shebang bezeichnet die Zeichenkombination #
 ----
 #!/usr/bin/python3
 ----
+=== So macht man Eirückungen
 
-== Erstes programm
+Benutzen Sie auf keinen Fall ein Mischmasch von Tabulatoren und Leerzeichen zur Einrückung, weil es nicht sauber plattformübergreifend funktioniert, da die Breite eines Tabulators in Leerzeichen nicht eindeutig für alle Plattformen definiert ist. Meine eindringliche Empfehlung ist, dass Sie entweder einen einzelnen Tabulator oder zwei oder vier Leerzeichen pro Einrückungs-Ebene benutzen.
+
+*benutzen Sie ausschließlich einen Einrückungsstil*
+
+== Erste programme
 
 * wir machen eine Datei und nen die file1.py
 * wir öffnen die Datei mit vi oder nano
@@ -58,6 +64,40 @@ print("Hallo Welt")
 * Ausgabe
 
 _Hallo Welt_
+
+
+[source,bash]
+.programm 2
+
+----
+#!/usr/bin/python3
+
+ausgabe = "wert"
+anzahl = 2 
+anzahl = 3 
+# michgibtsnicht = "irgendwas"
+
+print("Hallo Welt")
+print(ausgabe)
+print(anzahl*3)
+print("anzahl"*3)
+
+print(michgibtsnicht)
+----
+
+->Ausgabe
+
+Hallo Welt
+wert
+9
+anzahlanzahlanzahl
+Traceback (most recent call last):
+  File "/home/suleiman/bin/file1.py", line 13, in <module>
+    print(michgibtsnicht)
+NameError: name 'michgibtsnicht' is not defined
+
+* so haben wir unser erstes fehler ausgelöst
+
 
 
 
