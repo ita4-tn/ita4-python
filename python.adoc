@@ -1,0 +1,79 @@
+= Python
+
+== Was ist Python
+
+Python ist eine programiersprache,die mit ihre klare Syntax und einfache Lesberkeit leicht zu erlearnen ist und kann vielseitig eigezets werden.
+
+=== Python in Nano und Vi
+
+Auf beide Editoren kann man Python Skripte schreiben
+
+=== Start in Python
+
+[source,bash]
+.wir erstellen erstmal eine Datie die file1.py heißt
+
+----
+touch file1.py 
+----
+
+oder
+
+----
+> file1.py
+----
+
+[source,bash]
+.Um file1.py Ausführbar zu machen benutzen wir:
+----
+chmod a+x file1.py
+----
+-> chmod steht für change mode
+
+=== In vi oder nano
+wir benutzen als erstes den shebang (Shebang bezeichnet die Zeichenkombination #! am Anfang eines Skriptprogramms, ähnlich einer Dokumenttypdefinition. Bei unixoiden Betriebssystemen führt die Markierung mit Doppelkreuz und Ausrufezeichen dazu, dass das folgende Kommando mitsamt allen angegebenen Argumenten beim Aufruf des Programms ausgeführt wird. Der Dateiname wird dann als weiteres Argument übergeben.)<1>
+
+<1> https://de.wikipedia.org/wiki/Shebang 
+
+[source,bash]
+.shebang
+----
+#!/usr/bin/python3
+----
+
+== Erstes programm
+
+* wir machen eine Datei und nen die file1.py
+* wir öffnen die Datei mit vi oder nano
+* dann schreiben wir wie gefolgt
+
+[source,bash]
+.immer shebang als erstes
+----
+#!/usr/bin/python3
+
+print("Hallo Welt")
+----
+
+* Ausgabe
+
+_Hallo Welt_
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
