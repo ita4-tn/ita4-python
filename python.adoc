@@ -2,16 +2,16 @@
 
 == Was ist Python
 
-Python ist eine programiersprache,die mit ihre klare Syntax und einfache Lesberkeit leicht zu erlearnen ist und kann vielseitig eigezets werden.
+Python ist eine Programiersprache,die mit ihrer klaren Syntax und einfache Lesberkeit leicht zu erlearnen ist und kann vielseitig eingesetzt werden.
 
 === Python in Nano und Vi
 
-Auf beide Editoren kann man Python Skripte schreiben
+Auf beiden Editoren kann man Python Skripte schreiben
 
 === Start in Python
 
 [source,bash]
-.wir erstellen erstmal eine Datie die file1.py heißt
+.Man erstellen erstmal eine Datie die file1.py heißt
 
 ----
 touch file1.py 
@@ -32,7 +32,7 @@ chmod a+x file1.py
 
 === In vi oder nano
 
-wir benutzen als erstes den shebang (Shebang bezeichnet die Zeichenkombination #! am Anfang eines Skriptprogramms, ähnlich einer Dokumenttypdefinition. Bei unixoiden Betriebssystemen führt die Markierung mit Doppelkreuz und Ausrufezeichen dazu, dass das folgende Kommando mitsamt allen angegebenen Argumenten beim Aufruf des Programms ausgeführt wird. Der Dateiname wird dann als weiteres Argument übergeben.)<1>
+Man benutzt als erstes den shebang (Shebang bezeichnet die Zeichenkombination #! am Anfang eines Skriptprogramms, ähnlich einer Dokumenttypdefinition. Bei unixoiden Betriebssystemen führt die Markierung mit Doppelkreuz und Ausrufezeichen dazu, dass das folgende Kommando mitsamt allen angegebenen Argumenten beim Aufruf des Programms ausgeführt wird. Der Dateiname wird dann als weiteres Argument übergeben.)<1>
 
 <1> https://de.wikipedia.org/wiki/Shebang 
 
@@ -41,20 +41,22 @@ wir benutzen als erstes den shebang (Shebang bezeichnet die Zeichenkombination #
 ----
 #!/usr/bin/python3
 ----
+
 === So macht man Eirückungen
 
 Benutzen Sie auf keinen Fall ein Mischmasch von Tabulatoren und Leerzeichen zur Einrückung, weil es nicht sauber plattformübergreifend funktioniert, da die Breite eines Tabulators in Leerzeichen nicht eindeutig für alle Plattformen definiert ist. Meine eindringliche Empfehlung ist, dass Sie entweder einen einzelnen Tabulator oder zwei oder vier Leerzeichen pro Einrückungs-Ebene benutzen.
 
 *benutzen Sie ausschließlich einen Einrückungsstil*
 
-== Erste programme
 
-* wir machen eine Datei und nen die file1.py
-* wir öffnen die Datei mit vi oder nano
-* dann schreiben wir wie gefolgt
+== Erstes Programm
+
+* Eine Datei erstellen,zum Beispiel file1.py
+* Datei öffnen mit einem Editor wie zum Beispiel dem vi oder dem nano
+* Datei editieren
 
 [source,bash]
-.immer shebang als erstes
+.Die shebang kommt immer zuerst
 ----
 #!/usr/bin/python3
 
@@ -97,23 +99,6 @@ Traceback (most recent call last):
 NameError: name 'michgibtsnicht' is not defined
 
 * so haben wir unser erstes fehler ausgelöst
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
