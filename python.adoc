@@ -144,4 +144,112 @@ Ende Gelände
 * da die letzte var = None wird halt "nichts" ausgedrückt
   dan kommt die normale print am ende "Ende Gelände"
 
+== Schleifen
+
+Schleifen, werden benötigt, um einen Codeblock wiederholt auszuführen. Die meisten Schleifen enthalten einen Zähler oder ganz allgemein Variablen, die vor der schleife oder innerhalb ihr berechnugen durchführen.
+
+[source,bash]
+.Im folgenden sehen wir die allgemeine Syntax der for-Schleife in Python. <teilnehmer> steht für eine Liste, ein Tupel oder ein Dictionary
+
+----
+#!/usr/bin/python3
+
+teilnehmer = [
+    {'first': 'Erna', 'last': 'Mayer'},
+    {'first': 'Fred', 'last': 'Tischler'},
+    {'first': 'Karsten', 'last': 'Schmidt'}] <1>
+first = 'first'
+x = 0
+for item in teilnehmer:
+    x = x + 1 # da es in eine schleife ist zählt es immer weiter 1,2,3...
+    print(x) 
+    print(item['last']) # mit ['last'] werd der nachname von der liste auslesen
+    print(item['first']) # mit ['first'] werd der vorname von der liste ausgelesen
+    print(item) # die gesamte dic
+    print(item[first]) # wenn man eine variable die first heisst da dann musste man oben first = "first" hinschreiben
+    print('-'*10)
+----
+
+<1> https://www.python-kurs.eu/python3_dictionaries.php
+
+=== if in eine schleife:
+
+[source,bash]
+.Beispiel zu if in eine schleife, plus input
+----
+#!/usr/bin/python3
+
+
+obst = ['Apfel', 'Banane', 'Birne', 'Kiwi']
+
+eingangsfrage = input('Soll ueberhaupt etwas ausgegeben werden? [J|N]: ')
+
+if eingangsfrage == 'j' or eingangsfrage == 'J' or eingangsfrage == 'y' or eingangsfrage == 'Y':
+    for frucht in obst:
+        frage = input('Soll die Frucht ausgegeben werden? [J|N]: ')
+    #    if frage == 'J':
+    #        print(frucht)
+    #    elif frage == 'j':
+    #        print(frucht)
+    
+        if frage == 'j' or frage == 'J' or frage == 'y' or frage == 'Y':
+            print(frucht)
+----
+
+==== Was is input?
+
+Der Eingabestring des Benutzers wird von input() interpretiert, d.h. input() liefert beispielsweise einen Integer Wert zurück, wenn der Benutzer eine ganze Zahl eingeben hat und eine Liste, wenn der Benutzer eine Liste eingegeben hat.
+
+[source,bash]
+.Beispiel
+----
+eingangsfrage = input('Soll ueberhaupt etwas ausgegeben werden? [J|N]: ')
+----
+
+Achte auf größ klein schreibung
+
+==== continue/break
+
+-Eine break in einem Schleifencode bewirkt dass an dieser Stelle mit sofortiger Wirkung die sie unmittelbar umgebende Schleife verlassen wird.
+-Die continue Anweisung bewirkt dass an dieser Stelle wieder in den Schleifenkopf “gesprungen” und die nächste Prozess ausgeführt wird. Der noch folgende Teil des Schleifenrumpfs wird nicht mehr ausgeführt.
+
+[source,bash]
+.Beispiel
+----
+#!/usr/bin/python3
+
+
+obst = ['Apfel', 'Banane', 'Birne', 'Kiwi']
+
+#eingangsfrage = input('Soll ueberhauptnichts etwas ausgegeben werden? [J|N]: ')
+
+for frucht in obst:
+#    if eingangsfrage == 'j' or eingangsfrage == 'J' or eingangsfrage == 'y' or eingangsfrage == 'Y':
+##        break
+#        continue
+
+#################################
+    if frucht == 'Birne':
+        continue
+#################################
+
+    frage = input('Soll die Frucht ausgegeben werden? [J|N]: ')
+#    if frage == 'J':
+#        print(frucht)
+#    elif frage == 'j':
+#        print(frucht)
+
+    if frage == 'j' or frage == 'J' or frage == 'y' or frage == 'Y':
+        print(frucht)
+----
+
+=== Parameterübergabe: Parameter und Argumente
+
+Eine Funktion oder eine Prozedur benötigt üblicherweise Information über die Umgebung aus der heraus sie aufgerufen worden ist. Die Schnittstelle zwischen dieser Umgebung und der Funktion bzw. Prozedur, d.h. dem Funktionsrumpf (body) bzw. Prozedurrumpf, besteht aus speziellen Variablen, die man als Parameter bezeichnet. Indem man Parameter benutzt, kann man verschiedenste Objekte von "außen" innerhalb der Funktion benutzen. Die Syntax, wie man Parameter deklariert, und die Semantik, wie man die Argumente des Aufrufs an die formalen Parameter der Funktion oder Prozedur weiterleitet sind abhängig von der jeweiligen Programmiersprache.
+
+Im vorigen Abschnitt haben wir mehrfach die Begriffe Parameter und Argumente verwendet. Bei einigen Lesern hat sich sicherlich der Eindruck eingestellt, dass die beiden Begriffe synonym sind. Auch in der Literatur werden diese Begriffe häufig synonym verwendet. Dennoch gibt es einen klar definierten Unterschied. Parameter stehen im Kopf der Funktion oder Prozedur, also in der Definition der Funktion oder Prozedur. Während Argumente beim Aufruf verwendet werden. Sie liefern die Werte für die formalen Parameter während der Laufzeit des Programmes. <2>
+
+
+<2> https://www.python-kurs.eu/python3_parameter.php
+
 
