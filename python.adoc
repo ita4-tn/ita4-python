@@ -100,5 +100,48 @@ NameError: name 'michgibtsnicht' is not defined
 
 * so haben wir unser erstes fehler ausgelöst
 
+== Bedingte Anweisungen
+
+Die if-Anweisung wird benutzt um programmablauefe zu steurn(ob bestimmte programmteile ausgeführt werden oder nicht ).
+
+Wenn Sie mehrere Bedingungen nutzen möchten, verwenden Sie bei der erstes Bedingung zwar "if", bei allen weiteren am Anfang jedoch "elif".
+
+Falls keine der Bedingungen zutrifft, werden die Befehle, die unter "else:" stehen, ausgeführt.
+
+[source,bash]
+
+._Beispiel_
+----
+#!/usr/bin/python3
+
+var = 5 
+var = True
+var = False
+var = None
+
+
+# Kommentar
+if var is False:
+    print("falsch")
+elif var is True:
+    print("richtig")
+elif var is None:
+    print("nichts")
+else:
+    print("was anderes")
+    
+
+print('Ende Gelände')
+----
+
+->Ausgabe
+
+----
+nichts
+Ende Gelände
+----
+
+* da die letzte var = None wird halt "nichts" ausgedrückt
+  dan kommt die normale print am ende "Ende Gelände"
 
 
